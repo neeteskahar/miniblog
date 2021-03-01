@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+impost django_heroku
 
 # Build paths inside the project like this: BASE_DIR /'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,6 +135,14 @@ DATABASES['default'].update(db_from_env)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
+
+STAICFILES_DIRS =( 
+    os.path.join(BASE_DIR,"static/"),
+)
+
+STATUC_ROOT =os.path.join(BASE_DIR, staticfiles')
+django_heroku.settings(locals())
+
 
 
 # Static file serving.
